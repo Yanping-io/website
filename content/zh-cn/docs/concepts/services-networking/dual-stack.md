@@ -183,7 +183,7 @@ Service 的地址族默认为第一个服务集群 IP 范围的地址族（通�
     of the first element in the `.spec.ipFamilies` array.
 -->
 * `SingleStack`：单栈 Service。控制面使用第一个配置的服务集群 IP 范围为 Service 分配集群 IP。
-* `PreferDualStack`：启用双栈时，为 Service 分配 IPv4 和 IPv6 集群 IP 地址。如果不启用或不支持双栈，则会返回到单栈行为
+* `PreferDualStack`：启用双栈时，为 Service 分配 IPv4 和 IPv6 集群 IP 地址。如果不启用或不支持双栈，则会返回到单栈行为。
 * `RequireDualStack`：启用双栈时，从 IPv4 和 IPv6 的地址范围分配 Service 的 `.spec.ClusterIPs`。如果未启用或不支持双栈，则 Service API 对象创建失败。
   * 从基于在 `.spec.ipFamilies` 数组中第一个元素的地址族的 `.spec.ClusterIPs`
     列表中选择 `.spec.ClusterIP` 
